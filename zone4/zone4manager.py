@@ -54,14 +54,11 @@ class Zone4Manager:
     tmp = await self._reader.read(100)
     self._buffer.extend(tmp)
 
-    print(self._buffer)
-
     if(len(self._buffer) >= 5):
       try:
         messages = [x for x in self._buffer.decode("Ascii").split("$") if x]
 
         for idx, message in enumerate(messages, start=1):
-          print(message)
           if len(message) == 4:
             if message[0] in ['a', 'b', 'c', 'd']:
               zone = message[0]

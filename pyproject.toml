@@ -1,0 +1,29 @@
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zone4"
+version = "0.0.1"
+description = "Async library for controlling the Apart Zone4 preamp via serial"
+readme = "README.md"
+authors = [{ name = "Sam Smart", email = "me@sam-smart.co.uk" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: System :: Hardware",
+    "Framework :: AsyncIO"
+]
+keywords = ["zone4", "pre-amp", "controller"]
+dependencies = [
+    "feedparser >= 5.2.0",
+    "html2text",
+    'tomli; python_version < "3.11"',
+]
+requires-python = ">=3.9"
+
+[project.urls]
+Homepage = "https://github.com/samjsmart/zone4"
